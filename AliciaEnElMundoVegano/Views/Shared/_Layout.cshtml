@@ -1,21 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120617115-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120617115-1');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AMV</title>
     <link href="https://fonts.googleapis.com/css?family=Electrolize|Gugi|Hind+Siliguri|Varela+Round" rel="stylesheet">
-    <link rel="icon" href="~/wwwroot/images/logo.png"> 
-        <link rel="stylesheet" href="~/wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/wwwroot/css/site.css" />
-   
+    <link rel="icon" href="~/wwwroot/images/logo.png">
+    <link rel="stylesheet" href="~/wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/wwwroot/css/site.css" />
+
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/wwwroot/css/site.min.css" asp-append-version="true" />
     </environment>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
         <style>
@@ -74,7 +84,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>@Html.ActionLink(AliciaEnElMundoVegano.Resources.Layout.Navbar5, "Contact", "Home")</li>
                     <li>
-                        <ul style="list-style:none; display:inline-grid; float:left; class="language"">
+                        <ul style="list-style:none; text-align: center; display:inline-grid; float:left; class="language"">
                             <li>@Html.ActionLink("English", ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { language = "en-US" }, null)</li>
                             <li>@Html.ActionLink(HttpUtility.HtmlDecode("Espa&ntilde;ol"), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { language = "es-ES" }, null)</li>
                         </ul>
