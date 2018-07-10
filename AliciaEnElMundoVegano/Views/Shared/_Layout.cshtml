@@ -93,25 +93,42 @@
             </div>
         </div>
     </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            
-            <div class="text-center center-block">
-            <h4>@AliciaEnElMundoVegano.Resources.Layout.Footer1</h4>
-                    
-           <br />
-                <a href="https://www.facebook.com/pg/AliciaEnElMundoVegano" class="fa fa-facebook"></a>
-                <a href="https://twitter.com/AliciaMundoV" class="fa fa-twitter"></a>
-                <a href="https://www.youtube.com/channel/UCjFP0YzqjXbMb5uc8zM5ALw?view_as=subscriber" class="fa fa-youtube"></a>
-                <a href="https://www.instagram.com/aliciamundov/" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-snapchat-ghost"></a>
-                <a href="mailto:aliciaenelmundovegano@gmail.com" class="fa fa-envelope"></a>
-                </div>
-                <p>&copy; 2018 - AMV</p>
-            </footer>
-    </div>
+   <div class="container body-content">
+       <!-- Modal -->
+       <div class="modal fade" id="myModal" role="dialog">
+           <div class="modal-dialog">
+
+               <!-- Modal content-->
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   </div>
+                   <div class="modal-body">
+                       <img src="~/wwwroot/images/snapcode.svg" alt="Snap Code" style="width:auto; height:auto;" class="img-responsive" />
+                   </div>
+
+               </div>
+
+           </div>
+       </div>
+       @RenderBody()
+       <hr />
+       <footer>
+
+           <div class="text-center center-block">
+               <h4>@AliciaEnElMundoVegano.Resources.Layout.Footer1</h4>
+
+               <br />
+               <a href="https://www.facebook.com/pg/AliciaEnElMundoVegano" class="fa fa-facebook"></a>
+               <a href="https://twitter.com/AliciaMundoV" class="fa fa-twitter"></a>
+               <a href="https://www.youtube.com/channel/UCjFP0YzqjXbMb5uc8zM5ALw?view_as=subscriber" class="fa fa-youtube"></a>
+               <a href="https://www.instagram.com/aliciamundov/" class="fa fa-instagram"></a>
+               <a data-toggle="modal" data-target="#myModal" class="fa fa-snapchat-ghost"></a>
+               <a href="mailto:aliciaenelmundovegano@gmail.com" class="fa fa-envelope"></a>
+           </div>
+           <p>&copy; 2018 - AMV</p>
+       </footer>
+   </div>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
