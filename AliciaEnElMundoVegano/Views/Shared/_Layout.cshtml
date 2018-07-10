@@ -84,7 +84,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>@Html.ActionLink(AliciaEnElMundoVegano.Resources.Layout.Navbar5, "Contact", "Home")</li>
                     <li>
-                        <ul style="list-style:none; text-align: center; display:inline-grid; float:left; class="language"">
+                        <ul style="list-style:none; padding-left:0; display:inline-grid; float:left; class="language"">
                             <li>@Html.ActionLink("English", ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { language = "en-US" }, null)</li>
                             <li>@Html.ActionLink(HttpUtility.HtmlDecode("Espa&ntilde;ol"), ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { language = "es-ES" }, null)</li>
                         </ul>
